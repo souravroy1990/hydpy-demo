@@ -1,2 +1,2 @@
 @echo off
-del stream_data_*.csv
+del streaming_data_*.csv

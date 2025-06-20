@@ -87,7 +87,7 @@ class StreamDataPipeline:
     def run(self):
         logger.info("Starting Stream Data Pipeline...")
         while True:
-            filename = f'stream_data_{self.chunk_number}.csv'
+            filename = f'data_streamer_{self.chunk_number}.csv'
             data = self.generator.generate(self.chunk_size, start_nationkey=self.nationkey_counter)
             self.nationkey_counter += self.chunk_size
             self.writer.write(data, filename)
